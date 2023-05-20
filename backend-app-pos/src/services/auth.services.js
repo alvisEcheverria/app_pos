@@ -6,9 +6,9 @@ require('dotenv').config();
 class AuthServices {
     static async authenticate(credentials){
         try {
-            const { email, password } = credentials;
+            const { userName, password } = credentials;
             const result = await Users.findOne({
-                where: { email }
+                where: { userName }
             })
             if(result){
                 const isValid = bcrypt.compareSync(password, result.password);
@@ -24,7 +24,7 @@ class AuthServices {
         try {
             const token = jwt.sign(data, process.env.SECRET, {
                 algorithm: 'HS512',
-                expiresIn: '5m'
+                expiresIn: '1d'
             });
             return token;
         } catch (error) {

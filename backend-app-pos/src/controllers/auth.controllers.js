@@ -5,8 +5,8 @@ const userLogin = async (req, res, next) =>{
         const credentials = req.body;
         const result = await AuthServices.authenticate(credentials)
     if(result){
-      const { id, firstName, lastName, email, phone } = result.result; 
-      const user = { id, firstName, lastName, email, phone };
+      const { userId, userName, password, roleId } = result.result; 
+      const user = { userId, userName, password, roleId };
       const token = AuthServices.getToken(user);
       user.token = token;
       res.json({ ...user });

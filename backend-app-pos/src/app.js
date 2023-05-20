@@ -4,7 +4,7 @@ const cors = require('cors');
 const db = require('./utils/database');
 const handleError = require('./middlewares/error.middlewares');
 const initModels = require('./models/initModels');
-const { rolesRoutes, userRoutes, clientRoutes, authRoutes } = require('./routes');
+const { rolesRoutes, userRoutes, clientRoutes, authRoutes, categoriesRoutes, productsRoutes, ordersRoutes, invoiceRoutes } = require('./routes');
 
 const app = express();
 
@@ -30,6 +30,10 @@ app.use('/api/v1', rolesRoutes);
 app.use('/api/v1', userRoutes);
 app.use('/api/v1', clientRoutes);
 app.use('/api/v1', authRoutes);
+app.use('/api/v1', categoriesRoutes);
+app.use('/api/v1', productsRoutes);
+app.use('/api/v1', ordersRoutes);
+app.use('/api/v1', invoiceRoutes);
 
 app.use(handleError);
 

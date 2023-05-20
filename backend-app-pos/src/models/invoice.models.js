@@ -23,11 +23,6 @@ const Invoice = db.define('invoice', {
         allowNull: false,
         field: 'emission_point'
     },
-    invoiceNumber: {
-        type: DataTypes.STRING(50),
-        allowNull: false,
-        field: 'invoice_number'
-    },
     subtotal: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,

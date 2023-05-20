@@ -14,6 +14,10 @@ const Products = db.define('products', {
         allowNull: false,
         field: 'category_id'
     },
+    nameProduct: {
+        type: DataTypes.STRING(50),
+        allowNull: false,
+    },
     code: {
         type: DataTypes.STRING(50),
         allowNull: false,

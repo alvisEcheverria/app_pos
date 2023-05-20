@@ -5,6 +5,6 @@ const authenticate = require('../middlewares/auth.middlewares');
 const router = Router();
 
 router.post('/clients', clientRegister);
-router.get('/clients', authenticate, getAllClients);
+router.get('/clients', getAllClients);
 
 module.exports = router; 

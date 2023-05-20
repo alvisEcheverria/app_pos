@@ -22,6 +22,10 @@ const Orders = db.define('orders', {
     date: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
+    },
+    status: {
+        type: DataTypes.ENUM('active', 'inactive', 'purchased'),
+        defaultValue: 'active'
     }
 });
 

@@ -9,6 +9,17 @@ class RolesServices {
             throw error
         }
     }
+
+    static async getAll(){
+        try {
+            const result = await Roles.findAll({
+                attributes: ['roleId', 'roleName']
+            });
+            return result;
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 module.exports = RolesServices;

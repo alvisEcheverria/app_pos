@@ -1,69 +1,177 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+html{
+    font-size: 62.5%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body{
+    font-size: 16px;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.content{
+    width: 105rem;
+    margin: auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.main-nav{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.search-icon{
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: gray;
 }
+
+.client-input{
+    width: 30rem;
+    height: 3rem;
+    border: none;
+}
+
+.user-icon{
+    font-size: 2rem;
+    color: gray;
+}
+
+.content-orders{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.item-a{
+    width: 70%;
+}
+
+.item-b{
+    width: 30%;
+    background: #5448C8;
+    padding: 2rem;
+}
+
+.search-product-label{
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.content-clients-date{
+    background: linear-gradient(0deg, #5C91F7, #5C91F7), linear-gradient(0deg, #1DAFEE, #1DAFEE), #1DAFEE;
+    padding: 2rem;
+}
+
+.content-products{
+    padding: 2rem;
+}
+
+.content-products-cards{
+    display: flex;
+}
+
+.content-table{
+    width: 100%;
+    text-align: center;
+    border: solid 0.1rem gray;
+}
+
+.titles-row th{
+    border: solid 0.1rem gray;
+    background-color: gray;
+}
+
+.titles-row-client-data th{
+    border: solid 0.1rem gray;
+}
+
+.button-add-client{
+    width: 100%;
+    background-color: #F18805;
+    border: none;
+    cursor: pointer;
+}
+
+.card-product{
+    border: solid 0.1rem gray;
+    margin: 2rem;
+    padding: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.content-quantity{
+    display: flex;
+}
+
+.product-orders-card{
+    list-style: none;
+    margin: 2rem 0;
+    line-height: 3rem;
+    border: solid 0.1rem gray;
+    padding: 1rem;
+}
+
+.quantity-in-order{
+    font-size: 1.8rem;
+    padding: 0 1rem;
+}
+
+.update-quantity-buttons{
+    width: 2rem;
+    background-color: #F18805;
+    border: none;
+    cursor: pointer;
+}
+
+.total-products-in-order{
+    text-align: end;
+}
+
+.content-total-price{
+    text-align: end;
+    line-height: 3rem;
+}
+
+.content-total-price p span{
+    color: rgb(117, 3, 3);
+}
+
+.delete-button{
+    width: 100%;
+    background-color: #F18805;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.card-invoice{
+    border: solid 0.1rem gray;
+    margin-bottom: 2rem;
+}
+
+.content-buttons-role{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.content-buttons-role li a button{
+    background-color: #F18805;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+/* Suelo crear una carpeta y dividir los estilos por página, comentar la sección según el componente y trabajar con root, 
+pero el tiempo no me alcanzo, ya que primero me enfoque en la funcionalidad */
